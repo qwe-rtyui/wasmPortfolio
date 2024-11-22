@@ -1,0 +1,137 @@
+﻿/* Container geral */
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw; /* Alterado de 20px para 2vw */
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+/* Estilização do card */
+.card {
+    position: relative;
+    width: 15vw; /* Alterado de 25vh para 25vw */
+    height: 20vw; /* Mantido em vh para ser proporcional à altura da tela */
+    background-color: #f3f3f3;
+    border-radius: 1vw; /* Alterado de 10px para 1vw */
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 0.5s ease; /* Animação suave no hover */
+    display: flex;
+    flex-direction: row;
+}
+
+    .card:hover {
+        width: 35vw; /* Alterado de 50vh para 50vw */
+    }
+
+    /* Imagem dentro do card */
+    .card img {
+        width: 15vw; /* Alterado de 25vh para 25vw */
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1vw 0 0 1vw; /* Alterado de 10px para 1vw */
+    }
+
+/*----------------------------------------*/
+
+.card-image {
+    position: relative;
+    width: 15vw; /* Alterado de 25vh para 25vw */
+    height: 100%; /* A imagem ocupa 60% do card */
+    overflow: hidden;
+    /* Apenas o topo arredondado */
+}
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-image .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Fundo preto com opacidade */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2vw; /* Alterado de 2em para 2vw */
+        z-index: 1; /* Sobre a imagem */
+        transition: background 0.5s ease; /* Animação do overlay */
+    }
+
+        .card-image .card-overlay .icons {
+            display: flex;
+            gap: 2vw; /* Alterado de 15px para 2vw */
+        }
+
+            .card-image .card-overlay .icons i {
+                font-size: 2vw; /* Alterado de 1.0em para 2vw */
+                color: #fff; /* Cor branca */
+                transition: transform 0.3s ease; /* Animação de zoom */
+            }
+
+                .card-image .card-overlay .icons i:hover {
+                    transform: scale(1.2); /* Aumenta o ícone no hover */
+                }
+
+/*----------------------------------------*/
+
+/* Informações que aparecem no hover */
+.card-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw; /* Alterado de 10px para 1vw */
+    padding: 0px;
+    width: 0; /* Começa invisível */
+    opacity: 0; /* Invisível inicialmente */
+    overflow: hidden;
+    transition: opacity 0.5s ease, width 0.5s ease; /* Animação suave */
+}
+
+.card:hover .card-info {
+    width: 25vw; /* Alterado de 25vh para 25vw */
+    opacity: 1; /* Torna visível no hover */
+    padding: 2vw; /* Alterado de 20px para 2vw */
+}
+
+/* Títulos e botões dentro da informação */
+.card-info h3 {
+    font-size: 1.5vw; /* Alterado de 1.2em para 1.5vw */
+    margin: 0;
+    color: #333;
+}
+
+.card-info p {
+    font-size: 1vw; /* Alterado de 0.9em para 1vw */
+    color: #666;
+    margin: 0;
+}
+
+.card-info a {
+    display: inline-block;
+    margin-top: 1vw; /* Alterado de 10px para 1vw */
+    padding: 1vw 2vw; /* Alterado de 10px 15px para 1vw 2vw */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5vw; /* Alterado de 5px para 0.5vw */
+    font-size: 1vw; /* Alterado de 0.9em para 1vw */
+    transition: background-color 0.3s ease;
+}
+
+    .card-info a:hover {
+        background-color: #0056b3;
+    }
+
+
+@media (min-width: 1400px) {
+  
+}

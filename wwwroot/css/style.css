@@ -1,0 +1,13 @@
+﻿html {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+x {
+    color: rgb(40, 175, 176);
+}
+
+.dNav {
+    height: 100vh;
+    align-content: center;
+}

@@ -1,0 +1,67 @@
+﻿.page {
+    /*background-color: rgb(28, 32, 36)*/
+}
+
+.row-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite quebra para telas menores */
+    gap: 1rem; /* Espaçamento entre os elementos */
+    margin-bottom: 2rem;
+}
+
+.text-content {
+    flex: 1; /* Ocupa espaço proporcional */
+    text-align: start;
+}
+
+    .text-content span {
+        display: block;
+    }
+
+.text-title {
+    font-size: 4rem; /* Título maior */
+    /*color: rgb(40, 175, 176); /* Azul */
+    margin-bottom: 0.5rem;
+}
+
+.text-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    font-size: 1.2rem;
+}
+
+.image-content {
+    flex: 1; /* Ocupa espaço proporcional */
+    display: flex;
+    justify-content: end; /* Alinha imagem à direita */
+}
+
+    .image-content img {
+        border-radius: 39%;
+        background-color: #95e7f9;
+        max-width: 100%;
+        height: auto;
+    }
+
+@media (max-width: 768px) {
+    .text-title {
+        font-size: 2rem; /* Título maior */
+    }
+
+    .text-subtitle {
+        font-size: 1rem;
+    }
+
+    .row-layout {
+        flex-direction: row; /* Mantém lado a lado no celular */
+    }
+
+    .image-content img {
+        max-width: 80%; /* Ajusta a largura da imagem em telas pequenas */
+    }
+}

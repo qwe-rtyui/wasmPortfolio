@@ -1,0 +1,77 @@
+﻿<style>
+    about {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        background-color: #2e2e2e;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .about_container {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    .about_content{
+
+    }
+
+    .about_title{
+        justify-self: center;
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about_footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+        .about_footer p {
+            font-size: 0.9rem;
+        }
+
+        .about_footer a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+            .about_footer a:hover {
+                text-decoration: underline;
+            }
+</style>
+
+<div class="about">
+    <div class="about_container">
+        <div class="about_content">
+            <div class="about_title"><x>#</x>sobre mim</div>
+            <div class="text-subtitle" style="font-size: 1rem;">
+                Profissional com experiência na área de TI, atuando como Desenvolvedor .Net. Atuação com desenvolvimento de projetos, manutenção, sustentação e criação de API. 
+                Desenvolvimento de aplicações: web, Desktop; Criação de ferramentas Windows Form, relatórios, dashboard, ferramentas de fluxos etc. Todos os projetos com integração e o gerenciamento de bancos de dados SQL SERVER.
+            </div>
+            <div class="about_footer">
+                <div class="text-title" style="font-size: 1rem;"><x>São Paulo - Brasil</x></div>
+                <div class="text-title" style="font-size: 1rem;"><a href=""><x>KesleyJuan.Dev@gmail.com</x></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+
+}

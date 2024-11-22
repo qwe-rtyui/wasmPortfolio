@@ -1,0 +1,75 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.bdy {
+/*    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b2f;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;*/
+}
+    .bdy h1 {
+        font-size: 2.5rem;
+        /*color: #fff;*/
+        display: inline-block;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #fff;
+    }
+
+.skills-container {
+    text-align: center;
+    color: #22223b;
+}    
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.category {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 360px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    border: 2px solid #808080;
+}
+
+    .category h2 {
+        font-size: 1.5rem;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .skill-item i {
+        font-size: 2rem;
+        color: rgb(40, 175, 176);
+        margin-bottom: 10px;
+    }
+
+    .skill-item p {
+        margin: 0;
+        font-size: 1rem;
+        color: #c7c7c7;
+    }
+
+.icon {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
