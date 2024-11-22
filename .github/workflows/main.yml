@@ -25,7 +25,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - nme: Stup .Net
+      - name: Stup .Net
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
