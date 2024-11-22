@@ -2,14 +2,14 @@ name: Deploy
 
 on:
   push:
-    branchs:["main"]
+    branchs: ["main"]
 
   workflow_dispatch:
 
 permissions:
-  content:read
+  contents: read
   pages: write
-  id-token:write
+  id-token: write
 
 concurrency:
   group: "pages"
@@ -18,7 +18,7 @@ concurrency:
 jobs:
   deploy:
     environment:
-      name:github-pages
+      name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +28,7 @@ jobs:
       - nme: Stup .Net
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version:8.0.x
+          dotnet-version: 8.0.x
 
       - name: Install .Net Wasm Tools
         run: dotnet workload install wasm-Tools
