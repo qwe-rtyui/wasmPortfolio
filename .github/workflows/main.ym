@@ -1,0 +1,53 @@
+name: Deploy
+
+on:
+  push:
+    branchs:["main"]
+
+  workflow_dispatch:
+
+permissions:
+  content:read
+  pages: write
+  id-token:write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name:github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - nme: Stup .Net
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version:8.0.x
+
+      - name: Install .Net Wasm Tools
+        run: dotnet workload install wasm-Tools
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build -c Release --no-restore
+
+      - name: Publish .Net
+        run: dotnet publish WasmBlazorPortfolio.csproj -c Release -o docs --no-logo
+
+      - name: Setup Pages
+        uses: actions/configute-pages@v4
+
+      - name: Upload
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
