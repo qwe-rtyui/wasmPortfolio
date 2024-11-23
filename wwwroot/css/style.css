@@ -8,6 +8,11 @@ x {
 }
 
 .dNav {
-    height: 100vh;
+    min-height: 100vh;
     align-content: center;
+    margin-bottom: 25px;
+}
+
+.break-text {
+    white-space: pre-wrap; 
 }

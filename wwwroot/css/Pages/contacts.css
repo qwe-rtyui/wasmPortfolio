@@ -31,13 +31,17 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.contact-c{
+    justify-content: center;
+    justify-self: center;
+}
 
 .contact-item {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 6vw;
+    /* width: 6vw; */
 }
 
 .icon-diamond {
